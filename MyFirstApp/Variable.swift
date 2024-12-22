@@ -7,18 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Variable: View {
+  
+  let name: String = "Alex"
+  let age: Int = 27
+  let hasJob: Bool = false
+  
     var body: some View {
         VStack {
-            Text("Hello, Alex!")
-            Text("Hello, Alex!")
-            Text("Hello, Alex!")
-          
+            Text("Hello, \(name)")
+            Text("I am \(age) years old")
+            Text(name)
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    Variable()
 }
