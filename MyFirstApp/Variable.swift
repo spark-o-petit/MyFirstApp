@@ -13,11 +13,19 @@ struct Variable: View {
   let age: Int = 27
   let hasJob: Bool = false
   
+  let names: [String] = ["Alex", "John", "Jane"]
+  let engKrDictionary: [String: String] = ["Hello": "Hola", "World": "Mundo"]
+  let houseAnimals: [String] = ["Dog", "Cat", "Bird"]
+  let farmAnimals: [String] = ["Cow", "Sheep", "Chicken"]
+  
     var body: some View {
         VStack {
             Text("Hello, \(name)")
             Text("I am \(age) years old")
-            Text(name)
+            Text(names[1])
+          Text(engKrDictionary["World"] ?? "Not Found")
+          Text(houseAnimals[1])
+          Text(farmAnimals[1])
         }
         .padding()
     }

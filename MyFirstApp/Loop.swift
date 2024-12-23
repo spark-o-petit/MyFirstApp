@@ -7,24 +7,25 @@
 
 import SwiftUI
 
-struct Condition: View {
+struct Loop: View {
 
-  var randomNumber: Int = 3
+    let farmAnimals = ["🐮", "🐴", "🐔", "🐷"]
   
     var body: some View {
         VStack {
         
-          if (randomNumber % 2 == 0) {
-            Text("Even")
-          } else {
-            Text("Odd")
+//          ForEach(farmAnimals,
+//                  id: \.self) { animal in
+//            Text(animal)
+//          }
+          
+          ForEach(0 ..< 4) { number in
+            Text(farmAnimals[number])
           }
-
         }
-        .padding()
     }
 }
 
 #Preview {
-  Condition()
+  Loop()
 }
